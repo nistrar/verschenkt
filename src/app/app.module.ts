@@ -10,10 +10,15 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ProductListComponent} from './product-list/product-list.component'
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserProfileComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,7 @@ import { environment } from 'src/environments/environment';
     AngularFireAuthModule,
     AngularFireStorageModule,
     HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

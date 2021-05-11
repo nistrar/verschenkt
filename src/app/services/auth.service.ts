@@ -12,7 +12,7 @@ import {
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { User } from './user.model';
+import { User } from '../models/user.model';
 import { FirebaseApp } from '@angular/fire';
 
 @Injectable({ providedIn: 'root' })
