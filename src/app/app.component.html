@@ -1,18 +1,4 @@
-<h1>Base</h1>
-
-<div *ngIf="auth.user$ | async as user; else login">
-  <pre>
-    {{ user | json }}
-  </pre>
-  
-  <hr>
-  <button class="button" (click)="auth.signOut()">Sign Out</button>
-
-</div>
-
-<ng-template #login>
-  <button class="button" (click)="auth.googleSignin()">Login with Google</button>
-</ng-template>
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 
 <app-user-profile></app-user-profile>
 <app-product-list></app-product-list>

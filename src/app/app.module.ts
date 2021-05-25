@@ -1,3 +1,5 @@
+
+import { AuthService } from './services/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,14 +13,19 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { ProductListComponent} from './product-list/product-list.component'
-
-
+import { ProductListComponent} from './product-list/product-list.component';
+import { ProductNewComponent } from './product-new/product-new.component';
+import { ProductService } from './services/product.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
     UserProfileComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductNewComponent
   ],
   imports: [
     BrowserModule,
@@ -28,10 +35,12 @@ import { ProductListComponent} from './product-list/product-list.component'
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule
     
   ],
-  providers: [],
+  providers: [AuthService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
