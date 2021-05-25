@@ -19,7 +19,8 @@ import { ProductService } from './services/product.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSliderModule } from '@angular/material/slider';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +38,9 @@ import { MatSliderModule } from '@angular/material/slider';
     AngularFireStorageModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSliderModule
-    
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [AuthService, ProductService],
   bootstrap: [AppComponent]
